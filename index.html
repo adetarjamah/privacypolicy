@@ -1,8 +1,455 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Kebijakan Privasi</title></head>
-  <body>
-    <h1>Kebijakan Privasi</h1>
-    <p>Aplikasi ini menghormati privasi pengguna, bla bla bla...</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - AnyarGroup</title>
+    <style>
+        /* Resetting some basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, sans-serif; /* Change font to Tahoma */
+            line-height: 1.6;
+            background-color: rgba(18, 18, 18, 1); /* Change background */
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            min-height: 100vh;
+            padding: 20px;
+            padding-top: 60px; 
+        }
+
+        /* Small Header Styles */
+      .header {
+            width: 100%;
+            //background-color: black;
+            background-color: #212529;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: fixed; /* Fix the header */
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header img {
+            height: 40px; /* Adjust the logo size */
+            margin-left: 160px; /* Align logo with the sidebar */
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: rgba(18, 18, 18, 1); /* Change to rgba(18, 18, 18, 1) */
+            padding-top: 20px;
+            position: fixed;
+            top: 20px; /* Adjusted to leave space for the header */
+            left: 160px; /* Adjusted to move the sidebar closer to the center */
+            bottom: 0;
+            overflow-y: auto;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 15px;
+            font-size: 0.85rem; /* Reduce font size for sidebar list items */
+        }
+
+        .sidebar ul li a {
+            color: #FFD285;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85rem; /* Reduce font size */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #444;
+            text-decoration: underline;
+        }
+
+        /* Main Content Styles */
+        .content {
+            margin-left: 290px; /* Adjusted for sidebar, increased space for better alignment */
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Align content to the left */
+            background: rgba(18, 18, 18, 1);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding-left: 20px; /* Add padding to match sidebar's text indentation */
+            padding-top: 80px; /* Increased top padding for more space */
+        }
+
+        .container {
+            background: rgba(18, 18, 18, 1); /* Change to rgba(18, 18, 18, 1) */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #FFD285;
+        }
+        
+        h1 {
+            font-size: 2.5rem; /* Increase the font size */
+            margin-bottom: 20px; /* Optional: Add space below the title */
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for spacing between sections */
+        section {
+            margin-bottom: 40px; /* Add spacing between sections */
+        }
+
+        section h2 {
+            margin-bottom: 15px; /* Add spacing after section heading */
+        }
+
+        section ul {
+            margin-bottom: 20px; /* Add spacing after the list */
+        }
+
+        section p {
+            margin-bottom: 20px; /* Add spacing after paragraphs */
+        }
+
+        /* Footer Styles */
+        .footer {
+            width: 100%;
+            background-color: background-color: rgba(18, 18, 18, 1);
+            color: #FFD285;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //position: fixed;
+            //bottom: 0;
+            //left: 0;
+            z-index: 1000;
+            //border-top: 1px solid #333;
+        }
+
+        .footer img {
+            height: 25px; /* Adjust logo size */
+            margin: 15px;
+        }
+
+        .footer .logos img {
+            height: 25px;
+            margin: 0 15px;
+        }
+        
+        .footer .logos2 img {
+            height: 40px;
+            margin: 0 1px;
+        }
+        
+        .card {
+            width: 300px;
+            padding: 5px;
+            background-color: #292929;
+            border-radius: 15px;
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+            //margin: 20px auto;
+        }
+        
+        .card h2 {
+            text-align: center;
+        }
+        
+        .card p {
+            text-align: center;
+        }
+        
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            .header img {
+                margin-left: 10px; /* Align logo for smaller screens */
+                height: 30px;
+            }
+
+            .sidebar {
+                width: 100%; /* Sidebar will take full width */
+                left: 0; /* Align to the left */
+                top: 60px; /* Move the sidebar below the header */
+                padding-top: 0;
+                height: auto; /* Adjust height */
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0; /* No margin for content */
+                padding-left: 10px; /* Adjust left padding */
+                padding-top: 20px; /* Adjust top padding */
+                width: 100%; /* Take full width */
+            }
+
+            .sidebar ul li {
+                font-size: 1rem; /* Increase font size for mobile readability */
+            }
+
+            .footer {
+                padding: 20px; /* Adjust footer padding */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Small Header with Logo -->
+    <div class="header">
+        <img src="logo.png" alt="AnyarGroup Logo">
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#informasi">Informasi yang Kami Kumpulkan</a></li>
+            <li><a href="#tujuan">Tujuan Pengumpulan Informasi</a></li>
+            <li><a href="#berbagi">Berbagi Informasi dengan Pihak Ketiga</a></li>
+            <li><a href="#komitmen">Komitmen Kami terhadap Keamanan Data</a></li>
+            <li><a href="#cookie">Penggunaan Cookie</a></li>
+            <li><a href="#keamanan">Keamanan Informasi</a></li>
+            <li><a href="#hak">Hak Anda Terkait Data Pribadi</a></li>
+            <li><a href="#anak">Privasi Anak-Anak</a></li>
+            <li><a href="#keterkaitan">Keterkaitan dengan Lini Bisnis</a></li>
+            <li><a href="#perubahan">Perubahan pada Kebijakan Privasi</a></li>
+            <li><a href="#kontak">Kontak Kami</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <div class="container">
+            <h1>Kebijakan Privasi</h1>
+            
+            <div class="card">
+                <p><em>Terakhir diperbarui: 20 Januari 2025</em></p>
+            </div>
+            <br>
+
+            <br>
+            <p><strong>PT Anyar Retail Indonesia</strong> ("kami", "perusahaan", atau "Anyar Group") sangat menghargai privasi Anda dan berkomitmen untuk melindungi informasi pribadi yang Anda bagikan dengan kami. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi pribadi Anda yang kami peroleh melalui situs web kami, aplikasi, dan layanan terkait.</p>
+            <br>
+            <p>Kebijakan Privasi ini berlaku untuk situs web utama <span style="color: #FFD285; font-style: italic;">anyargroup.co.id</span>, serta situs web terkait bisnis kami, termasuk <span style="color: #FFD285; font-style: italic;">hris.anyargroup.co.id (aplikasi Daily A-Team)</span>, <span style="color: #FFD285; font-style: italic;">rkm.co.id (aplikasi RKM)</span>, <span style="color: #FFD285; font-style: italic;">triwarna.co.id (aplikasi Triwarna)</span>, dan <span style="color: #FFD285; font-style: italic;">aplikasi VIS Mobile</span> (secara kolektif disebut "Situs Web Kami").</p>
+            <br>
+
+             <section id="informasi">
+                <h2>Informasi yang Kami Kumpulkan</h2>
+                <p>Kami mengumpulkan berbagai jenis informasi pribadi, baik yang Anda berikan langsung maupun yang diperoleh secara otomatis melalui teknologi seperti cookie. Informasi ini mencakup beberapa aspek penting yang memungkinkan kami memberikan layanan yang lebih baik.</p>
+                <ul>
+                    <li><strong>Informasi Identitas:</strong> Ini mencakup data pribadi yang Anda berikan secara langsung, seperti nama, alamat, nomor telepon, dan email, yang digunakan untuk memverifikasi identitas Anda dan berkomunikasi terkait transaksi atau layanan yang Anda gunakan.</li>
+                    <br>
+                    <li><strong>Informasi Transaksi:</strong> Kami mencatat riwayat transaksi yang Anda lakukan, baik pembelian produk maupun penggunaan layanan kami. Ini membantu kami untuk memproses pesanan Anda dan memberikan pengalaman yang lebih baik dalam setiap transaksi.</li>
+                    <br>
+                    <li><strong>Informasi Teknis:</strong> Kami mengumpulkan data teknis seperti alamat IP, jenis perangkat yang digunakan, dan data tentang browser serta cara Anda menavigasi situs atau aplikasi kami. Informasi ini digunakan untuk meningkatkan fungsionalitas dan kenyamanan dalam penggunaan layanan kami.</li>
+                    <br>
+                    <li><strong>Informasi Lainnya:</strong> Selain data teknis dan transaksi, kami juga menerima umpan balik atau masukan yang Anda berikan, baik melalui survei, formulir, atau komunikasi langsung dengan kami. Data ini membantu kami memahami kebutuhan dan preferensi Anda lebih baik.</li>
+                </ul>
+            </section>
+
+            <section id="tujuan">
+                <h2>Tujuan Pengumpulan Informasi</h2>
+                <p>Kami menggunakan informasi Anda untuk tujuan berikut:</p>
+                <ul>
+                    <li><strong>Memproses Transaksi dan Pesanan:</strong> Informasi pribadi digunakan untuk memverifikasi dan memproses setiap pesanan atau transaksi yang Anda lakukan. Ini mencakup pembelian produk, pemrosesan pembayaran, atau pengiriman barang yang dipesan.</li>
+                     <br>
+                    <li><strong>Layanan Pelanggan:</strong> Kami menggunakan informasi Anda untuk menyediakan dukungan pelanggan, termasuk layanan teknis atau bantuan dalam menyelesaikan masalah yang mungkin Anda hadapi saat menggunakan produk atau layanan kami.</li>
+                     <br>
+                    <li><strong>Program Loyalitas dan Promosi:</strong> Jika Anda berpartisipasi dalam program loyalitas atau promosi, informasi yang Anda berikan akan membantu kami mengelola dan mempersonalisasi pengalaman tersebut, seperti pemberian hadiah atau tawaran khusus berdasarkan riwayat transaksi Anda.</li>
+                     <br>
+                    <li><strong>Pengembangan Layanan:</strong> Data yang kami kumpulkan memungkinkan kami untuk menganalisis cara Anda menggunakan layanan kami. Ini memberi kami wawasan yang diperlukan untuk mengembangkan dan meningkatkan kualitas layanan, memastikan bahwa kami terus memenuhi kebutuhan Anda dengan cara yang efisien dan relevan.</li>
+                     <br>
+                    <li><strong>Informasi Pembaruan dan Penawaran:</strong> Kami juga menggunakan informasi Anda untuk mengirimkan pembaruan mengenai layanan atau produk baru, tawaran promosi, atau informasi yang menurut kami relevan dan dapat meningkatkan pengalaman Anda. Kami berusaha memastikan bahwa komunikasi ini sesuai dengan preferensi dan minat Anda.</li>
+                </ul>
+            </section>
+
+            <section id="berbagi">
+                <h2>Berbagi Informasi dengan Pihak Ketiga</h2>
+                <p>Kami menghormati privasi Anda dan memastikan bahwa informasi pribadi yang Anda berikan digunakan secara bijak. Informasi Anda tidak akan dijual atau disewakan kepada pihak ketiga. Namun, dalam beberapa situasi tertentu, kami dapat membagikan informasi Anda dengan pihak ketiga yang relevan untuk mendukung layanan kami. Berikut adalah kondisi-kondisi tersebut:</p>
+                <ul>
+                    <li><strong>Afiliasi Bisnis:</strong> Kami dapat berbagi informasi dengan perusahaan afiliasi kami, seperti RKM dan Triwarna, untuk mendukung layanan atau promosi yang ditawarkan. Kerja sama ini bertujuan untuk meningkatkan pengalaman pelanggan melalui program-program khusus yang mungkin lebih relevan dengan kebutuhan Anda.</li>
+                    <br>
+                    <li><strong>Penyedia Layanan:</strong> Informasi Anda dapat dibagikan kepada pihak ketiga yang membantu kami dalam menjalankan operasi bisnis, termasuk namun tidak terbatas pada:</li>
+                    <br>
+                        <ul>
+                            <li><strong>Mitra pengiriman:</strong> Untuk memastikan barang atau layanan yang Anda pesan dapat dikirimkan dengan tepat waktu dan ke lokasi yang sesuai.</li>
+                            <br>
+                            <li><strong>Pengolah pembayaran:</strong> Informasi yang diperlukan untuk memproses transaksi keuangan, seperti kartu kredit atau dompet digital.</li>
+                            <br>
+                            <li><strong>Penyedia layanan IT:</strong> Untuk mendukung infrastruktur teknologi kami, seperti hosting data, pemeliharaan sistem, dan layanan keamanan.</li>
+                        </ul>
+                        <p>Semua penyedia layanan ini diwajibkan untuk menjaga kerahasiaan informasi Anda dan hanya menggunakannya sesuai dengan kebutuhan untuk menyediakan layanan kepada Anda.</p>
+                    <li><strong>Otoritas Hukum:</strong> Kami dapat mengungkapkan informasi pribadi Anda jika diwajibkan oleh hukum atau peraturan yang berlaku. Hal ini meliputi:</li>
+                    <br>
+                        <ul>
+                            <li>Menanggapi permintaan sah dari otoritas penegak hukum atau badan pengawas.</li>
+                            <br>
+                            <li>Melindungi hak, properti, atau keselamatan perusahaan kami, pelanggan kami, atau pihak lain.</li>
+                            <br>
+                            <li>Memenuhi kewajiban hukum dalam kasus penyelidikan atau proses hukum lainnya.</li>
+                        </ul>
+                </ul>
+            </section>
+            
+            <section id="komitmen">
+                <h2>Komitmen Kami terhadap Keamanan Data</h2>
+                <p>Setiap kali kami berbagi informasi Anda dengan pihak ketiga, kami memastikan bahwa mereka mematuhi kebijakan perlindungan data yang ketat dan hanya menggunakan informasi Anda untuk tujuan yang telah disepakati. Kami juga mengambil langkah-langkah teknis dan organisasi untuk memastikan bahwa data Anda dilindungi selama proses berbagi informasi.</p>
+
+                <p>Kebijakan ini dirancang untuk menjaga transparansi dan memastikan bahwa data Anda hanya digunakan untuk tujuan yang sah, dengan tetap menghormati privasi Anda.</p>
+             </section>
+
+            <section id="cookie">
+                <h2>Penggunaan Cookie</h2>
+                <p>Kami menggunakan cookie untuk meningkatkan pengalaman pengguna di Situs Web Kami. Anda dapat mengelola pengaturan cookie melalui preferensi browser Anda. Menonaktifkan cookie mungkin mempengaruhi fungsionalitas situs kami.</p>
+            </section>
+
+            <section id="keamanan">
+                <h2>Keamanan Informasi</h2>
+                <p>Kami mengambil langkah-langkah yang wajar untuk melindungi informasi pribadi Anda dari akses yang tidak sah atau pengungkapan yang tidak sah. Namun, tidak ada metode pengiriman melalui internet atau penyimpanan elektronik yang 100% aman.</p>
+            </section>
+
+            <section id="hak">
+                <h2>Hak Anda Terkait Data Pribadi</h2>
+                <p>Kami menghormati hak Anda dalam hal pengelolaan data pribadi sesuai dengan hukum perlindungan data yang berlaku.</p>
+                <ul>
+                    <li><strong>Hak untuk Mengakses Data Pribadi.</strong> Anda berhak untuk mengetahui data pribadi apa saja yang kami kumpulkan dan bagaimana data tersebut digunakan. Kami akan memberikan salinan data pribadi Anda jika diminta, serta informasi tentang tujuan pengumpulan, pihak yang menerima data, dan jangka waktu penyimpanannya.</li>
+                    <br>
+                    <li><strong>Hak untuk Memperbarui atau Memperbaiki Data</strong> Jika data pribadi Anda yang kami miliki tidak akurat atau telah berubah, Anda berhak untuk meminta pembaruan atau perbaikan. Kami akan memperbarui data Anda secepat mungkin untuk memastikan keakuratan dan relevansinya.</li>
+                     <br>
+                    <li><strong>Hak untuk Meminta Penghapusan Data</strong> Dalam situasi tertentu, Anda dapat meminta agar data pribadi Anda dihapus dari sistem kami, misalnya:</li>
+                    <br>
+                        <ul>
+                            <li>Ketika data tidak lagi diperlukan untuk tujuan pengumpulan awal.</li>
+                            <br>
+                            <li>Ketika Anda menarik persetujuan atas pemrosesan data.</li>
+                            <br>
+                            <li>Ketika pemrosesan data melanggar hukum.</li>
+                        </ul>
+                        <p>Kami akan memproses permintaan penghapusan ini sesuai dengan kewajiban hukum atau persyaratan penyimpanan data tertentu.</p>
+                    <li><strong>Hak untuk Menolak Pemrosesan Data</strong> Anda berhak menolak pemrosesan data pribadi Anda dalam kondisi tertentu, misalnya untuk tujuan pemasaran langsung atau ketika pemrosesan dilakukan berdasarkan kepentingan yang sah. Jika Anda mengajukan keberatan, kami akan menghentikan pemrosesan data tersebut kecuali kami memiliki alasan hukum yang kuat untuk melanjutkannya.</li>
+                    <br>
+                    <li><strong>Cara Mengajukan Permintaan</strong> Untuk melaksanakan hak-hak Anda, Anda dapat menghubungi kami melalui detail kontak yang tercantum dalam kebijakan privasi ini. Kami akan menanggapi permintaan Anda sesegera mungkin, biasanya dalam waktu 30 hari kerja, tergantung pada kompleksitas permintaan Anda.
+                    <br><br>
+                    Kami berkomitmen untuk melindungi data Anda dan memastikan bahwa semua permintaan terkait hak Anda ditangani dengan transparansi dan sesuai dengan peraturan perlindungan data yang berlaku. Jika Anda merasa hak Anda tidak dihormati, Anda juga memiliki hak untuk mengajukan keluhan kepada otoritas perlindungan data setempat.</li>
+                </ul>
+            </section>
+
+            <section id="anak">
+                <h2>Privasi Anak-Anak</h2>
+                <p>Kami sangat menghormati privasi anak-anak dan berkomitmen untuk mematuhi peraturan perlindungan data yang berlaku terkait pengumpulan informasi dari individu di bawah usia tertentu. Berikut adalah rincian mengenai kebijakan kami terkait privasi anak-anak:</p>
+                <ul>
+                <li><strong>Penggunaan Situs oleh Anak-Anak.</strong> Situs web kami tidak dirancang atau ditujukan untuk digunakan oleh anak-anak di bawah usia 13 tahun. Layanan, produk, dan konten yang kami tawarkan ditujukan untuk pengguna yang telah memenuhi persyaratan usia minimum sesuai dengan peraturan hukum setempat.</li>
+                <br>
+                <li><strong>Pengumpulan Data dari Anak-Anak.</strong> Kami tidak secara sengaja mengumpulkan data pribadi dari anak-anak di bawah usia 13 tahun. Jika ada informasi yang kami terima dan kemudian diketahui berasal dari individu di bawah batas usia ini, kami akan segera mengambil langkah untuk menghapus data tersebut dari sistem kami.</li>
+                </ul>
+            </section>
+
+            <section id="keterkaitan">
+                <h2>Keterkaitan dengan Lini Bisnis</h2>
+                <p>Kebijakan privasi ini dirancang untuk mencakup seluruh layanan, situs web, dan aplikasi yang berada dalam ekosistem Anyar Group. Kami memastikan bahwa perlindungan data pribadi diterapkan secara konsisten di seluruh lini bisnis kami. Berikut adalah cakupan dan penerapan kebijakan ini:</p>
+                <ul>
+                    <li><strong>Cakupan Kebijakan</strong> Kebijakan ini mencakup berbagai platform digital yang dikelola oleh Anyar Group, termasuk situs web dan aplikasi mobile yang mendukung berbagai layanan kami. Setiap layanan memiliki fungsi yang unik tetapi tunduk pada prinsip yang sama dalam hal perlindungan privasi dan data pribadi.</li>
+                    <br>
+                    <li><strong>Platform yang Dicakup</strong></li>
+                    <br>
+                    <ul>
+                        <li><strong>Daily A-Team (hris.anyargroup.co.id):</strong> Platform ini digunakan untuk absensi karyawan secara online dan pengelolaan data sumber daya manusia. Data yang dikumpulkan mencakup informasi identitas karyawan, riwayat kehadiran, dan catatan kerja yang relevan.</li>
+                        <br>
+                        <li><strong>RKM (rkm.co.id):</strong> Sebagai toko besi dan bahan bangunan, situs ini melayani transaksi pelanggan secara online dan offline. Informasi seperti data identitas pelanggan, riwayat pembelian, dan preferensi produk mungkin dikumpulkan untuk memberikan pengalaman belanja yang lebih baik.</li>
+                        <br>
+                        <li><strong>Triwarna (triwarna.co.id):</strong> Platform ini menyediakan toko cat dan bahan dekorasi, termasuk layanan konsultasi warna. Kami mengumpulkan data pelanggan untuk keperluan pemesanan, rekomendasi produk, dan pengelolaan promosi.</li>
+                        <br>
+                        <li><strong>VIS Mobile:</strong> Aplikasi ini dirancang untuk mendukung layanan pelanggan dan operasional lainnya dalam Anyar Group. Data yang dikumpulkan melalui aplikasi ini mencakup informasi teknis, riwayat layanan, dan umpan balik pelanggan untuk meningkatkan kualitas layanan.</li>
+                    </ul>
+                    <li><strong>Pengelolaan Data Antar Lini Bisnis</strong> Kami memastikan bahwa data yang dikumpulkan di satu platform hanya digunakan untuk tujuan yang sesuai dan tidak dibagikan ke platform lain tanpa persetujuan pengguna. Setiap layanan memiliki mekanisme pengelolaan data yang transparan dan sesuai dengan hukum perlindungan data yang berlaku.</li>
+                </ul>
+            </section>
+
+            <section id="perubahan">
+                <h2>Perubahan pada Kebijakan Privasi</h2>
+                <p>Kebijakan privasi ini dapat diperbarui dari waktu ke waktu untuk mencerminkan perubahan dalam layanan kami, perkembangan teknologi, atau persyaratan hukum yang berlaku. Kami akan memastikan bahwa setiap revisi yang dilakukan bertujuan untuk meningkatkan perlindungan privasi Anda.</p>
+            </section>
+
+            <section id="kontak">
+                <h2>Kontak Kami</h2>
+                <p>Kami sangat menghargai umpan balik, pertanyaan, atau kekhawatiran Anda terkait kebijakan privasi ini. Jika Anda memerlukan klarifikasi lebih lanjut, memiliki pertanyaan khusus, atau ingin menyampaikan keluhan mengenai pengelolaan data pribadi Anda, Anda dapat menghubungi kami melalui informasi berikut:</p>
+                <p><strong>Informasi Kontak Perusahaan</strong></p>
+                <p><strong>PT. Anyar Retail Indonesia</strong></p>
+                <ul>
+                    <li><strong>Email: <a href="mailto:anyartech@gmail.com">anyartech@gmail.com</a></strong> Kami menyediakan saluran email khusus untuk menangani pertanyaan terkait privasi dan perlindungan data. Kirimkan pertanyaan atau keluhan Anda, dan tim kami akan menanggapi dalam waktu secepat mungkin.</li>
+                    <br>
+                    <li><strong>Telepon: +62 811-2308-000</strong> Anda juga dapat menghubungi kami langsung melalui nomor telepon yang tersedia. Layanan pelanggan kami siap membantu pada hari kerja selama jam operasional.</li>
+                    <br>
+                    <li><strong>Alamat Kantor:</strong> Jl. Rancaekek Jl. Raya Cipasir No.KM22, Jelegong, Kec. Rancaekek, Kabupaten Bandung, Jawa Barat 40394
+                    <br>
+                    Anda dapat mengirimkan surat fisik atau dokumen terkait privasi ke alamat kantor kami. Mohon sertakan informasi yang jelas mengenai maksud dan tujuan korespondensi untuk memudahkan proses penanganan.</li>
+                </ul>
+                <p><strong>Jam Operasional.</strong> Tim dukungan kami tersedia pada hari kerja, Senin hingga Jumat, pukul 09.00–17.00 WIB. Permintaan yang diterima di luar jam tersebut akan diproses pada hari kerja berikutnya.
+                </p>
+            </section>
+            
+        </div>
+    </div>
+    
+     <!-- Footer -->
+    <div class="footer">
+    <p>&copy; 2025 AnyarGroup. All rights reserved.</p>
+    <div class="logos">
+        <a href="https://anyargroup.co.id">
+            <img src="logo.png" alt="AnyarGroup Logo">
+        </a>
+    </div>
+    <div class="logos2">
+        <a href="https://hris.anyargroup.co.id">
+            <img src="logo_daily.png" alt="Daily A-Team Logo">
+        </a>
+        <a href="https://rkm.co.id">
+            <img src="logo_rkm.png" alt="RKM Logo">
+        </a>
+        <a href="https://triwarna.co.id">
+            <img src="logo_triwarna.png" alt="Triwarna Logo">
+        </a>
+        <a href="https://anyargroup.co.id">
+            <img src="logo_vis.png" alt="VIS Logo">
+        </a>
+    </div>
+</div>
+
+</body>
 </html>
